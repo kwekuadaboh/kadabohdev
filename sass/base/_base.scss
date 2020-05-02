@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-synthesis: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "RedHat",Ubuntu,'Open Sans', 'Helvetica Neue', sans-serif, arial;
+  // overflow: hidden;
+  background:linear-gradient(180deg, var(--color-white), var(--color-gray-200));
+  line-height: 1.65;
+}
+

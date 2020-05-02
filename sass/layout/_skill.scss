@@ -1,0 +1,48 @@
+.skills {
+
+  &-set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 15rem;
+
+  }
+
+  &--list {
+    border: 1px solid #000;
+    width: 10rem;
+    height: 11rem;
+    box-shadow: 1px -1px 0px 0px rgba(0,0,0,0.1);
+    border-radius: 2px;
+    position: absolute;
+    text-align: center;
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(33,147,176,1) 100%);;
+    transition: all 5s;
+    
+    &.py {
+      z-index: 2;
+    }
+  }
+
+  &-text {
+    text-align: center;
+    display: block;
+    margin-top: 2rem;
+    font-weight: 700;
+
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: .5rem;
+      height: .5rem;   
+      border-radius: 50%;
+      background-color: #000;
+      margin-right: .4rem;
+    }
+  }
+
+
+}
+

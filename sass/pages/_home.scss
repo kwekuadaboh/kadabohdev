@@ -1,0 +1,109 @@
+.main-sec {
+  margin-top: 5%;
+  font-size: 2rem;
+}
+
+
+.section {
+  &-skills {
+    padding: 1rem;
+    position: relative;
+
+  }
+
+  &-projects {
+    position: relative;
+    margin-top: 10%;
+    // border: 1px solid red;
+  }
+}
+
+
+
+/*////////////////////////////////////////////////////////////
+PROJECT ARROW STYLES 
+*////////////////////////////////////////////////////////////
+.btn__arrow {
+  $size: 2rem;
+  $width: 2px;
+ 
+
+  &-wrapper {
+    padding: .8rem;
+    @include flexbox-default;
+  }
+
+  &-text {
+    border: 2px solid #000;
+    text-align: center;
+    display: block;
+    opacity: 0.7;
+    transition: opacity 300ms;
+    font-size: 1.2rem;
+   
+    &:hover {
+      opacity: 1;
+
+      & +.btn__arrow-box span {
+        width: 4.5rem;
+        right: -2.2rem;
+        border-radius: 0 30% 30% 0%;
+      }
+
+      & +.btn__arrow-box::before,
+      & +.btn__arrow-box::after {
+        right: -2.2rem
+      }
+    }
+  }
+
+  &-box {
+    cursor: pointer;
+    display: block;
+    width: $size;
+    height: $size;
+    position: relative;
+
+
+    & span,
+    &::before,
+    &::after {
+      content: "";
+      width: $size;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      background: #000;
+    }
+
+      & span {
+        transition: width 0.3s,right 0.3s .05s;
+        right: 0;
+        width: 0;
+        transform-origin: left 50%;
+      }
+
+      &::before,
+      &::after {
+        right: 0;
+        border-radius: 0 40% 40% 0%;
+        transform-origin: right 50%;
+        transition: right 0.3s 0.05s;
+      }  
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+  } 
+}
+
+.project-thumbs {
+  background: url(../src/img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  background-repeat: no-repeat;
+  
+}

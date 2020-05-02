@@ -1,0 +1,16 @@
+{
+  "name": "kae-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "portifolio by KAE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass -w sass -o css"
+  },
+  "author": "The Kweku",
+  "license": "ISC",
+  "directories": {
+    "lib": "lib"
+  }
+}

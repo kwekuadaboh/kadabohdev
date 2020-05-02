@@ -1,0 +1,76 @@
+.btn {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+  display: inline-block;
+  vertical-align: middle;
+
+  &:focus {
+    outline: none;    // firefox debugging
+  }
+}
+
+
+
+.nav {
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    padding: 0.5rem 0.85rem;
+    transition: all 100ms;
+    font-size: 1.6rem;
+  }
+
+  &__link:active {
+    outline: none;
+    transform: translateY(-1px);
+  }
+
+  &__link:hover {
+    transform: translateY(-1px);
+    background-color: var(--cyan-blue-light);
+  }
+  
+}
+
+.selected .btn {   // NAV LINK SELECTED
+  color: #54A5c4;
+ 
+}
+
+ /*////////////////////////////////////////////////////////
+  CERTIFICATE LOGO - ITF+
+  ////////////////////////////////////////////*///////////
+
+.cert-logo {  
+  width: 7.5rem;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+.view--resume {
+  border: 1px solid #000;
+  padding: .7rem;
+  border-radius: 3px;
+
+
+
+
+  transition: transform 100ms;
+  transform: perspective(1px) translateZ(0);
+
+  &:hover,
+  &:active,
+  &:focus {
+    transform: translatex(8px);
+  }
+}
+
+.btn-img {  // cert logo 
+  &:first-child {
+    margin-right: 1.5rem;
+  }
+
+
+}

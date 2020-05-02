@@ -1,0 +1,120 @@
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+/*///////////////////////////////////////////////////////
+ POSITIONS THE HAMBURGER  MENU 
+///////////////////////////////////////////////////// */
+
+  &__hamburger {
+    cursor: pointer;
+
+  }
+ 
+  &__hamburger-box {
+    display: block;
+    width: 3.5rem;
+    height: 3rem;
+    margin: 1rem;
+    margin-right: 1.5rem;
+    position: relative;
+    @include flexbox-default;
+  }
+
+  &__hamburger-line,  // MIDDLE LINE 
+  &__hamburger-line::before, 
+  &__hamburger-line::after {
+    display: block;
+    width: 3rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color:#000;
+    position: relative;
+  }
+
+  &__hamburger-line::before, 
+  &__hamburger-line::after {
+    content: "";
+    display: block;
+    position: absolute;
+  }
+
+  &__hamburger-line::before {  // TOP LINE
+    top: -10px;
+  }
+
+  &__hamburger-line:after {    /// buttom LINE 
+    top: 10px;
+  }
+
+/*///////////////////////////////////////////////////////
+ HAMBURGER TOGGLER
+///////////////////////////////////////////////////// */
+  &__hamburger .is-active &__hamburger-line {
+    transition-delay: 220ms;
+  }
+
+  &__hamburger.is-active  &__hamburger-line::before {
+    transform: translate3d(7px, 3.5px, 0px) rotate(45deg) scale(0.7, 1);  
+  }
+  
+  &__hamburger.is-active &__hamburger-line::after {
+    transform: translate3d(7px, -3.5px, 0px) rotate(-45deg) scale(0.7, 1);
+  }
+
+
+  /*///////////////////////////////////////////////////////
+  HEADER LOGO CONTAINER  
+///////////////////////////////////////////////////// */
+.header {
+  &-logo {
+    transform-origin: left;
+    transition: transform 150ms cubic-bezier(0, 0.37, 0.13, 1.54); // transition back 
+  }
+}
+
+  /*///////////////////////////////////////////////////////
+   TOGGLES HEADER -[KAE] LOGO OFF AND BACK ON    
+  ///////////////////////////////////////////////////// */
+  .header-logo.logoOff  {
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform 5ms cubic-bezier(0, 0.37, 0.13, 1.54) 
+  }
+
+
+  &__menu {
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform 150ms cubic-bezier(0.075, 0.82, 0.165, 1.35) ;
+    position: absolute;
+    right: 0%;
+    width: 85%;
+    
+  /*/////////////////////////////////////////////////////////
+  TOGGLES NAV MENU ON AND OFF   
+  ///////////////////////////////////////////////////// /////*/
+    &.open-menu {
+      transform: scale(1,1);
+      transform-origin: left;
+      transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1.35);  // Displays menu items or transition on 
+    }
+  }
+
+ .nav__menu
+    &__list {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;   
+    }
+
+    &__item {
+      padding: .4rem .75rem;
+      display: inline-block;
+
+    }
+
+}
+
+

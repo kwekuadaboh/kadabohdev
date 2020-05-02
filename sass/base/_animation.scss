@@ -1,0 +1,35 @@
+@keyframes active-rotateL {
+  0% {
+    transform: rotateZ(0deg)
+               translateX(0%)
+               translateY(0%);
+  }
+
+  to {
+  
+    transform: rotateZ(-45deg)
+               translateX(-80%)
+               translateY(-15%);
+  }
+}
+
+@keyframes active-rotateR {
+  0% {
+    transform: rotateZ(0deg)
+               translateX(0%)
+               translateY(0%);
+  }
+
+  to {
+    transform: rotateZ(45deg)
+               translateX(80%)
+               translateY(-15%);
+  }
+}
+
+.active-rotateL {
+  animation: active-rotateL 2s ease-in-out forwards;
+}
+.active-rotateR {
+  animation: active-rotateR 2s ease-in-out forwards;
+}

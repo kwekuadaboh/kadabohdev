@@ -1,0 +1,396 @@
+:root {
+  --cyan-blue-dark: #323f4b;
+  --cyan-blue-light: #e4e7eb;
+  --cyan-blue-dark-2: rgba(50, 63, 75, .3);
+  --cyan-blue-light-2: rgba(228, 231, 235, .2);
+  --cyan-shadow: #17a2b8;
+  --cyan-med-light: #3bc2f7;
+  --dodger-blue-dark: #2196f3;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-200: #ccc; }
+
+@keyframes active-rotateL {
+  0% {
+    transform: rotateZ(0deg) translateX(0%) translateY(0%); }
+  to {
+    transform: rotateZ(-45deg) translateX(-80%) translateY(-15%); } }
+
+@keyframes active-rotateR {
+  0% {
+    transform: rotateZ(0deg) translateX(0%) translateY(0%); }
+  to {
+    transform: rotateZ(45deg) translateX(80%) translateY(-15%); } }
+
+.active-rotateL {
+  animation: active-rotateL 2s ease-in-out forwards; }
+
+.active-rotateR {
+  animation: active-rotateR 2s ease-in-out forwards; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-synthesis: none; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-family: "RedHat",Ubuntu,'Open Sans', 'Helvetica Neue', sans-serif, arial;
+  background: linear-gradient(180deg, var(--color-white), var(--color-gray-200));
+  line-height: 1.65; }
+
+@font-face {
+  font-family: "RedHat";
+  src: url(../src/fonts/RedHatText-Regular.ttf) format("woff");
+  font-size: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "RedHat";
+  src: url(../src/fonts/RedHatText-Italic.ttf) format("woff");
+  font-style: italic;
+  font-size: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: "RedHat";
+  src: url(../src/fonts/RedHatText-Bold.ttf) format("woff");
+  font-size: normal;
+  font-weight: 700; }
+
+/*//////////////////////////////////////////////////////////
+  STYLES FOR FIRST LOGO LETTER - K 
+////////////////////////////////////////////////////////*/
+.header-logo a {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-shadow: 3px 3px 3px #949696;
+  font-size: 2rem;
+  font-weight: 400; }
+  .header-logo a::first-letter {
+    font-size: 3rem;
+    color: var(--dodger-blue-dark);
+    font-weight: 700; }
+
+/*/////////////////////////////////ALL HEADINGS 
+*/
+.heading-primary {
+  font-size: 1.7rem;
+  font-weight: normal; }
+
+.heading-skill {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  opacity: .8; }
+
+.heading-project {
+  text-align: center;
+  font-size: 1.6rem;
+  letter-spacing: 2px; }
+  .heading-project span {
+    color: red;
+    display: block;
+    margin-left: 10rem; }
+
+.m-1 {
+  margin: 1rem; }
+
+.mb-15 {
+  margin-bottom: 1.5rem !important; }
+
+.mb-25 {
+  margin-bottom: 2.5rem !important; }
+
+.p-1 {
+  padding: 1rem; }
+
+.pb-25 {
+  padding-bottom: 3.5rem !important; }
+
+.btn {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.6rem;
+  display: inline-block;
+  vertical-align: middle; }
+  .btn:focus {
+    outline: none; }
+
+.nav__link:link, .nav__link:visited {
+  position: relative;
+  padding: 0.5rem 0.85rem;
+  transition: all 100ms;
+  font-size: 1.6rem; }
+
+.nav__link:active {
+  outline: none;
+  transform: translateY(-1px); }
+
+.nav__link:hover {
+  transform: translateY(-1px);
+  background-color: var(--cyan-blue-light); }
+
+.selected .btn {
+  color: #54A5c4; }
+
+/*////////////////////////////////////////////////////////
+  CERTIFICATE LOGO - ITF+
+  ////////////////////////////////////////////*/
+.cert-logo {
+  width: 7.5rem;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid red; }
+
+.view--resume {
+  border: 1px solid #000;
+  padding: .7rem;
+  border-radius: 3px;
+  transition: transform 100ms;
+  transform: perspective(1px) translateZ(0); }
+  .view--resume:hover, .view--resume:active, .view--resume:focus {
+    transform: translatex(8px); }
+
+.btn-img:first-child {
+  margin-right: 1.5rem; }
+
+.footer {
+  margin-top: 5%; }
+  .footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin-bottom: 1rem; }
+    .footer-social svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: block;
+      text-align: center; }
+  .footer-text {
+    font-size: 1.2rem; }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: all 300ms; }
+  .header.sticky {
+    background-color: #fff;
+    transition: all 20ms ease-in; }
+
+.hero {
+  background-image: linear-gradient(to right, rgba(33, 147, 176, 0.3), rgba(109, 213, 237, 0.4)), url(../img/bubbles.png);
+  background-size: contain;
+  background-position: top;
+  border-radius: 100% 0% 100% 0% / 0% 56% 44% 100%;
+  border: double var(--color-black);
+  padding: 1rem;
+  border-width: 0px 0px .5rem 0px; }
+  .hero--siri {
+    display: block; }
+
+@media only screen and (min-width: 768px) {
+  .hero-home {
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center; } }
+
+.nav {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /*///////////////////////////////////////////////////////
+ POSITIONS THE HAMBURGER  MENU 
+///////////////////////////////////////////////////// */
+  /*///////////////////////////////////////////////////////
+ HAMBURGER TOGGLER
+///////////////////////////////////////////////////// */
+  /*///////////////////////////////////////////////////////
+  HEADER LOGO CONTAINER  
+///////////////////////////////////////////////////// */
+  /*///////////////////////////////////////////////////////
+   TOGGLES HEADER -[KAE] LOGO OFF AND BACK ON    
+  ///////////////////////////////////////////////////// */ }
+  .nav__hamburger {
+    cursor: pointer; }
+  .nav__hamburger-box {
+    display: block;
+    width: 3.5rem;
+    height: 3rem;
+    margin: 1rem;
+    margin-right: 1.5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .nav__hamburger-line, .nav__hamburger-line::before, .nav__hamburger-line::after {
+    display: block;
+    width: 3rem;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    position: relative; }
+  .nav__hamburger-line::before, .nav__hamburger-line::after {
+    content: "";
+    display: block;
+    position: absolute; }
+  .nav__hamburger-line::before {
+    top: -10px; }
+  .nav__hamburger-line:after {
+    top: 10px; }
+  .nav__hamburger .is-active .nav__hamburger-line {
+    transition-delay: 220ms; }
+  .nav__hamburger.is-active .nav__hamburger-line::before {
+    transform: translate3d(7px, 3.5px, 0px) rotate(45deg) scale(0.7, 1); }
+  .nav__hamburger.is-active .nav__hamburger-line::after {
+    transform: translate3d(7px, -3.5px, 0px) rotate(-45deg) scale(0.7, 1); }
+  .nav .header-logo {
+    transform-origin: left;
+    transition: transform 150ms cubic-bezier(0, 0.37, 0.13, 1.54); }
+  .nav .header-logo.logoOff {
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform 5ms cubic-bezier(0, 0.37, 0.13, 1.54); }
+  .nav__menu {
+    transform: scale(0, 1);
+    transform-origin: right;
+    transition: transform 150ms cubic-bezier(0.075, 0.82, 0.165, 1.35);
+    position: absolute;
+    right: 0%;
+    width: 85%;
+    /*/////////////////////////////////////////////////////////
+  TOGGLES NAV MENU ON AND OFF   
+  ///////////////////////////////////////////////////// /////*/ }
+    .nav__menu.open-menu {
+      transform: scale(1, 1);
+      transform-origin: left;
+      transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1.35); }
+  .nav__menu
+.nav__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; }
+  .nav__item {
+    padding: .4rem .75rem;
+    display: inline-block; }
+
+.skills-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 15rem; }
+
+.skills--list {
+  border: 1px solid #000;
+  width: 10rem;
+  height: 11rem;
+  box-shadow: 1px -1px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  position: absolute;
+  text-align: center;
+  background: radial-gradient(circle, white 0%, #2193b0 100%);
+  transition: all 5s; }
+  .skills--list.py {
+    z-index: 2; }
+
+.skills-text {
+  text-align: center;
+  display: block;
+  margin-top: 2rem;
+  font-weight: 700; }
+  .skills-text::before {
+    content: '';
+    display: inline-block;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50%;
+    background-color: #000;
+    margin-right: .4rem; }
+
+.main-sec {
+  margin-top: 5%;
+  font-size: 2rem; }
+
+.section-skills {
+  padding: 1rem;
+  position: relative; }
+
+.section-projects {
+  position: relative;
+  margin-top: 10%; }
+
+/*////////////////////////////////////////////////////////////
+PROJECT ARROW STYLES 
+*/
+.btn__arrow-wrapper {
+  padding: .8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn__arrow-text {
+  border: 2px solid #000;
+  text-align: center;
+  display: block;
+  opacity: 0.7;
+  transition: opacity 300ms;
+  font-size: 1.2rem; }
+  .btn__arrow-text:hover {
+    opacity: 1; }
+    .btn__arrow-text:hover + .btn__arrow-box span {
+      width: 4.5rem;
+      right: -2.2rem;
+      border-radius: 0 30% 30% 0%; }
+    .btn__arrow-text:hover + .btn__arrow-box::before,
+    .btn__arrow-text:hover + .btn__arrow-box::after {
+      right: -2.2rem; }
+
+.btn__arrow-box {
+  cursor: pointer;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  position: relative; }
+  .btn__arrow-box span, .btn__arrow-box::before, .btn__arrow-box::after {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    background: #000; }
+  .btn__arrow-box span {
+    transition: width 0.3s,right 0.3s .05s;
+    right: 0;
+    width: 0;
+    transform-origin: left 50%; }
+  .btn__arrow-box::before, .btn__arrow-box::after {
+    right: 0;
+    border-radius: 0 40% 40% 0%;
+    transform-origin: right 50%;
+    transition: right 0.3s 0.05s; }
+  .btn__arrow-box::before {
+    transform: rotate(-45deg); }
+  .btn__arrow-box::after {
+    transform: rotate(45deg); }
+
+.project-thumbs {
+  background: url(../src/img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+  background-repeat: no-repeat; }

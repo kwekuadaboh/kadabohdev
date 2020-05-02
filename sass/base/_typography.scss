@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "RedHat";
+  src: url(../src/fonts/RedHatText-Regular.ttf) format('woff');
+  font-size: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "RedHat";
+  src: url(../src/fonts/RedHatText-Italic.ttf) format('woff');
+  font-style: italic;
+  font-size: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "RedHat";
+  src: url(../src/fonts/RedHatText-Bold.ttf) format('woff');
+  font-size: normal;
+  font-weight: 700;
+} 
+
+/*//////////////////////////////////////////////////////////
+  STYLES FOR FIRST LOGO LETTER - K 
+////////////////////////////////////////////////////////*/
+.header {  
+  &-logo a {
+
+    &::first-letter {
+      font-size: 3rem;
+      color: var(--dodger-blue-dark);
+      font-weight: 700;
+    }
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-shadow: 3px 3px 3px rgba(148, 150, 150, 1);
+    font-size: 2rem;
+    font-weight: 400;
+
+    // border: 1px dotted blue;
+  }
+}
+/*/////////////////////////////////ALL HEADINGS 
+*/////////////////////////////
+
+.heading {
+  &-primary {
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+
+  &-skill {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    opacity: .8;
+
+  }
+
+  &-project {
+    text-align: center;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+
+    & span {
+      color: red;
+      display: block;
+      margin-left: 10rem
+    }
+
+  }
+}
+
