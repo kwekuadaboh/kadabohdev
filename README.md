@@ -1,6 +1,6 @@
 #kadaboh.dev
 
-Welcome to my personal portifolio site design and built by me using sass and vanila javascript
+Welcome to my personal portifolio site design and built by me using sass and vanila NETLIFY
 
 View the [website here]()
 

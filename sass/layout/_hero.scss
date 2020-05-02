@@ -17,14 +17,9 @@
   border: double var(--color-black);
   padding: 1rem;
   border-width: 0px 0px .5rem 0px; 
-    
-
-
 }
 
 .hero-home {
-  // border: 1px solid red;
-
   @media only screen and (min-width: 768px) {
     max-width: 80%;
     margin-right: auto;
