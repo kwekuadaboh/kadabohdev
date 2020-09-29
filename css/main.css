@@ -1,13 +1,14 @@
 :root {
   --cyan-blue-dark: #323f4b;
   --cyan-blue-light: #e4e7eb;
-  --cyan-blue-dark-2: rgba(50, 63, 75, .3);
-  --cyan-blue-light-2: rgba(228, 231, 235, .2);
+  --cyan-blue-dark-2: rgba(50, 63, 75, 0.3);
+  --cyan-blue-light-2: rgba(228, 231, 235, 0.2);
   --cyan-shadow: #17a2b8;
   --cyan-med-light: #3bc2f7;
   --dodger-blue-dark: #2196f3;
   --color-white: #fff;
   --color-black: #000;
+  --color-black-1: rgba(0, 0, 0, 0.5);
   --color-gray-200: #ccc; }
 
 @keyframes active-rotateL {
@@ -195,10 +196,9 @@ body {
   background-image: linear-gradient(to right, rgba(33, 147, 176, 0.3), rgba(109, 213, 237, 0.4)), url(../img/bubbles.png);
   background-size: contain;
   background-position: top;
-  border-radius: 100% 0% 100% 0% / 0% 56% 44% 100%;
-  border: double var(--color-black);
+  border: solid var(--color-black);
   padding: 1rem;
-  border-width: 0px 0px .5rem 0px; }
+  border-width: 0px 0px 0.3rem 0px; }
   .hero--siri {
     display: block; }
 

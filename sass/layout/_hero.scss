@@ -1,22 +1,21 @@
-
 .hero {
-  
   &--siri {
     display: block;
   }
 
-  background-image: linear-gradient(to right, 
-                    rgba(#2193b0,.3), 
-                    rgba(#6dd5ed,.4)),
-                    url(../img/bubbles.png);
+  background-image: linear-gradient(
+      to right,
+      rgba(#2193b0, 0.3),
+      rgba(#6dd5ed, 0.4)
+    ),
+    url(../img/bubbles.png);
   background-size: contain;
   background-position: top;
 
-
-  border-radius: 100% 0% 100% 0% / 0% 56% 44% 100%  ;
-  border: double var(--color-black);
+  // border-radius: 100% 0% 100% 0% / 0% 56% 44% 100%;
+  border: solid var(--color-black);
   padding: 1rem;
-  border-width: 0px 0px .5rem 0px; 
+  border-width: 0px 0px 0.3rem 0px;
 }
 
 .hero-home {

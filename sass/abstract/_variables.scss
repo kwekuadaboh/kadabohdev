@@ -1,15 +1,15 @@
 :root {
-  --cyan-blue-dark: #323f4b;  //whole page or root  
+  --cyan-blue-dark: #323f4b; //whole page or root
   --cyan-blue-light: #e4e7eb; // background hover of nav-links
-  --cyan-blue-dark-2: rgba(50, 63, 75, .3);
+  --cyan-blue-dark-2: rgba(50, 63, 75, 0.3);
   // --cyan-blue-dark-2: rgba(255, 255,255, .5);
-  --cyan-blue-light-2: rgba(228, 231, 235, .2); 
-  
+  --cyan-blue-light-2: rgba(228, 231, 235, 0.2);
+
   --cyan-shadow: #17a2b8;
   --cyan-med-light: #3bc2f7;
-  --dodger-blue-dark: #2196f3;  // bg-info bootstrap
+  --dodger-blue-dark: #2196f3; // bg-info bootstrap
   --color-white: #fff;
   --color-black: #000;
+  --color-black-1: rgba(0, 0, 0, 0.5);
   --color-gray-200: #ccc;
 }
-

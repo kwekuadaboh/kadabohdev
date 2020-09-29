@@ -6,12 +6,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "liveserver": "live-server  --port=3040",
-    "watch": "node-sass -w sass -o css"
+    "devserver": "live-server  --port=3040",
+    "watch": "node-sass -w sass -o css",
+    "start": "npm-run-all --parallel devserver watch"
   },
   "author": "The Kweku",
   "license": "ISC",
   "directories": {
     "lib": "lib"
-  }
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {}
 }
