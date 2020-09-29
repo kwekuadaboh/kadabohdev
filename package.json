@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "liveserver": "live-server  --port=3040",
     "watch": "node-sass -w sass -o css"
   },
   "author": "The Kweku",
